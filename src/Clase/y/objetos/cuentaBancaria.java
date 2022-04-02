@@ -7,6 +7,7 @@ public class cuentaBancaria {
     Cliente propietarioCuenta;
     double saldoCuenta;
     
+    
     public void abonar (double cantidad){
         saldoCuenta+=cantidad;
     }
