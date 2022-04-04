@@ -21,7 +21,7 @@ public class Ejercicio5 {
         
         System.out.println("--------------------------------");
         System.out.println("Lectura Anterior: ");
-        System.out.println(fe.getLecturaA());
+        System.out.println(fe.getLecturaA()+("kwh"));
         System.out.println("Lectura Actual: ");
         System.out.println(fe.getLecturaM());
         System.out.println("Multiplicador: ");
