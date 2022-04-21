@@ -1,13 +1,14 @@
 
 package Ejercicios;
-
+ import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class Ejercicio2 {
     
     public static void main(String[] args) {
         Scanner leer= new Scanner(System.in);
-        
+        NumberFormat formato=new DecimalFormat("#0.00");
         calculoIva cv=new calculoIva();
         
         System.out.println("Ingrese el precio del articulo: ");
@@ -21,6 +22,6 @@ public class Ejercicio2 {
         
         System.out.println("--------------------------------");
         System.out.println("El articulo con IVA es: $"+cv.calIva(cv));
-        System.out.println("El segundo articulo sin IVA es: "+cv.sinIva(cv));
+            System.out.println("El segundo articulo sin IVA es: "+formato.format(cv.sinIva(cv)));
     }
 }

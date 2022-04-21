@@ -3,7 +3,7 @@ package Ejercicios;
 
 public class FacturaElectrica {
     int ncuenta;
-    double lecturaA,lecturaM,mult,consumoM,consumoD,valorF;
+    double lecturaA=9128.00,lecturaAA=8984.00,mult=1.000,consumoM,consumoD,valorF;
 
     public int getNcuenta() {
         return ncuenta;
@@ -21,12 +21,12 @@ public class FacturaElectrica {
         this.lecturaA = lecturaA;
     }
 
-    public double getLecturaM() {
-        return lecturaM;
+    public double getLecturaAA() {
+        return lecturaAA;
     }
 
-    public void setLecturaM(double lecturaM) {
-        this.lecturaM = lecturaM;
+    public void setLecturaAA(double lecturaAA) {
+        this.lecturaAA = lecturaAA;
     }
 
     public double getMult() {
@@ -60,21 +60,31 @@ public class FacturaElectrica {
     public void setValorF(double valorF) {
         this.valorF = valorF;
     }
+  
+      
     public double consumoM(){
-        double consumom;
+        double Consumo;
+        double R;
+        Consumo=(this.lecturaA - this.lecturaAA);
+        R=(Consumo * this.mult);
         
-        consumom=lecturaA-lecturaM*mult;
-        return consumom;
+        return R;
+        
     }
+    
     public double consumoD(){
-        return consumoD;
-    }
-    public double valorf(FacturaElectrica dato){
-        double vf;
-        double c;
-        c=dato.consumoM();
+        double ConsumoD;
+        ConsumoD=(this.consumoM() / 30);
         
-        vf=c*0.20;
-        return vf;
+        return ConsumoD;
+        
     }
+    
+    public double valorF(){
+        double valor;
+        valor=(this.consumoM() * 0.20);
+        
+        return valor;
+    }
+    
 }

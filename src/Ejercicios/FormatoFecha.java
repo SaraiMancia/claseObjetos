@@ -1,29 +1,52 @@
 
 package Ejercicios;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.Scanner;
 
 public class FormatoFecha {
-    public static void main(String [] args){
-      
-        String date_time = "10-06-2012 ";
-        SimpleDateFormat dateParser = new SimpleDateFormat("MM-dd-yy ");
-        {
-            try { 
-                Date date = dateParser.parse(date_time);
-                System.out.println(date);
+ String fecha;
 
-                SimpleDateFormat dateFormatter = new SimpleDateFormat("MM-dd-yy");
-                System.out.println(dateFormatter.format(date));
+    public FormatoFecha() {
+    }
 
-            } catch (ParseException e) {
-                e.printStackTrace();
-            }
-        }
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
     
+    
+    public String formato(String fecha) { //
+        String fechaG ="";
+        fechaG += fecha.substring(0, 2) + "-";
+        fechaG += fecha.substring(2, 4) + "-";
+        fechaG += fecha.substring(4, 8);
         
+        return fechaG;
+    }
+    public String formato(int fecha) {
+        String fecha1 = String.valueOf(fecha);
+        String fechaP ="";
+        fechaP += fecha1.substring(0, 2) + "/";
+        fechaP+= fecha1.substring(2, 4) + "/";
+        fechaP+= fecha1.substring(4, 8);
+        
+        
+        return fechaP;
+    }
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        
+         FormatoFecha  formatoF = new FormatoFecha();
+         
+        System.out.println("Introduzca la fecha");
+        String fecha = leer.nextLine();
+        formatoF.setFecha(fecha);
+        
+        System.out.println("Formato de fecha con guiones: " +formatoF.formato(fecha));
+        System.out.println("Formato de fecha con plecas: " +formatoF.formato(Integer.parseInt(fecha)));
     }
     
 }
