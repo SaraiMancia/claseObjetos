@@ -9,7 +9,7 @@ public class Ejercicio3 {
     public static void main(String[] args) {
          Scanner leer=new Scanner(System.in);
          Estudiante e=new Estudiante();
-         
+             Hashtable<String,String> h= new Hashtable<String,String>();
          String nombre = null, carnet = null,codigo = null;
    
         for (int i=1; i<=5;i++){
@@ -23,30 +23,16 @@ public class Ejercicio3 {
          
         
         }
+               
+         for (int i= 1; i<=5; i++) {
+
         
-          Hashtable<String,String> h= new Hashtable<String,String>();
-        h.put("nombre:",nombre);
-        h.put("Carnet: ", carnet);
-        h.put("codigo:", codigo);
-        System.out.println(h);
-         h.put("nombre:",nombre);
-        h.put("Carnet: ", carnet);
-        h.put("codigo:", codigo);
-        System.out.println(h);
-         h.put("nombre:",nombre);
-        h.put("Carnet: ", carnet);
-        h.put("codigo:", codigo);
-        System.out.println(h);
-         h.put("nombre:",nombre);
-        h.put("Carnet: ", carnet);
-        h.put("codigo:", codigo);
-        System.out.println(h);
-         h.put("nombre:",nombre);
-        h.put("Carnet: ", carnet);
-        h.put("codigo:", codigo);
-        System.out.println(h);
+        System.out.println("El nombre del estudiante es: "+e.getNombre());
+        System.out.println("El cogigo de la carrera de el estudiante es: " +e.getCodigo());
+        System.out.println("El carnet del estudiante es: " +e.getCarnet());
+        Estudiante.put("a" +i,String.valueOf(h));
         
-       
+    }
       
     }
 

@@ -4,6 +4,10 @@ package Ejercicios;
 import java.util.Hashtable;
 
 public class Estudiante {
+
+    static void put(String string, String valueOf) {
+  
+    }
     String nombre, carnet,codigo;
 
     public Estudiante() {
@@ -14,11 +18,6 @@ public class Estudiante {
         this.carnet = carnet;
         this.codigo = codigo;
      
-            Hashtable<String,String> h= new Hashtable<String,String>();
-        h.put("nombre:",nombre);
-        h.put("Carnet: ", carnet);
-        h.put("codigo:", codigo);
-        System.out.println(h);
     }
 
     public String getNombre() {
